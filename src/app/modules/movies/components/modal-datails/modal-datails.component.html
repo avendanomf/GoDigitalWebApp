@@ -1,0 +1,50 @@
+<div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">{{tittle}}</h4>
+</div>
+<div class="modal-body">
+    <div class="form-group">
+        <div class="input-group align-content-center">
+            <div class="form-floating w-100 mt-1">
+                <label><b>Titulo:</b></label>
+                {{movie.title}}
+            </div>
+            <div class="form-floating w-100 mt-1">
+                <label><b>Estado:</b></label>
+                {{movie.status}}
+            </div>
+            <div class="form-floating w-100 mt-1">
+                <label><b>Tag line:</b></label>
+                {{movie.tagline}}
+            </div>
+            <div class="form-floating w-100 mt-1">
+                <label><b>Promedio de Votos:</b></label>
+                {{movie.vote_average}}
+            </div>
+            <div class="form-floating w-100 mt-1">
+                <label><b>Recuento de votos:</b></label>
+                {{movie.vote_count}}
+            </div>     
+            <div class="form-floating w-100 mt-1">
+                <label><b>Lenguaje Original:</b></label>
+                {{movie.original_language}}
+            </div>       
+            <div class="form-floating w-100 mt-1" >
+                <label><b>Lenguajes Traducidos:</b></label>
+                <div class="col-6">
+                    <ul class="list-group-flush">
+                        <li class="list-group-item" *ngFor="let lng of movie.spoken_languages">
+                            <i class="fas fa-map-marker-alt"></i>   {{lng.english_name}}
+                        </li>
+                    </ul>
+                </div>
+            </div> 
+            <div class="form-floating w-100 mt-1">
+                <label><b>Reumen:</b></label>
+                {{movie.overview}}
+            </div>
+            <div class="mt-1 w-100">
+                <button (click)="passBack()" type="submit" class="btn btn-primary w-100">Cerrar</button>
+            </div>            
+        </div>
+    </div>
+</div>

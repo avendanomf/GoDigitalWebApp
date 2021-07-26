@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="col-8"><h2>Mejor Calificadas</h2></div>
+    <app-search (search)="handleSearch($event)"></app-search>
+</div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Titulo</th>
+        <th scope="col">Lenguaje</th>
+        <th scope="col">Votos</th>
+        <th scope="col">Detalle</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let lstTopmovies of topmovies | search: filtro_valor" >
+      <tr>
+        <th scope="row">{{lstTopmovies.id}}</th>
+        <td>{{lstTopmovies.title}}</td>
+        <td>{{lstTopmovies.original_language}}</td>
+        <td>{{lstTopmovies.vote_average}}</td>
+        <td><i (click)="openModal(lstTopmovies.id)" class="far fa-eye text-info"></i></td>
+      </tr>
+    </tbody>
+  </table>

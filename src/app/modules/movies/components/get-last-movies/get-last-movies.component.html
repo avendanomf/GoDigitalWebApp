@@ -1,0 +1,82 @@
+<div class="row">
+    <div class="col-8">
+        <h2>Recientes</h2>
+    </div>
+</div>
+<br />
+<div class="row">
+    <div class="col-12">
+        <label><b>Titulo:</b></label>
+        {{lastmovies.title}}
+    </div>
+    <div class="col-12">
+        <label><b>Estado:</b></label>
+        {{lastmovies.status}}
+    </div>
+    <div class="col-12">
+        <label><b>Tag line:</b></label>
+        {{lastmovies.tagline}}
+    </div>
+    <div class="col-12">
+        <label><b>Promedio de Votos:</b></label>
+        {{lastmovies.vote_average}}
+    </div>
+    <div class="col-12">
+        <label><b>Recuento de votos:</b></label>
+        {{lastmovies.vote_count}}
+    </div>
+    <div class="col-12">
+        <label><b>Lenguaje Original:</b></label>
+        {{lastmovies.original_language}}
+    </div>
+    <div class="col-12">
+        <label><b>Lenguajes Traducidos:</b></label>
+        <div class="col-6">
+            <ul class="list-group-flush">
+                <li class="list-group-item" *ngFor="let lng of lastmovies.spoken_languages">
+                    <i class="fas fa-map-marker-alt"></i> {{lng.english_name}}
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-12">
+        <label><b>Reumen:</b></label>
+        {{lastmovies.overview}}
+    </div>
+</div>
+
+<!-- 
+<div class="form-floating w-100 mt-1">
+    <label><b>Titulo:</b></label>
+    {{movie.title}}
+</div>
+<div class="form-floating w-100 mt-1">
+    <label><b>Estado:</b></label>
+    {{movie.status}}
+</div>
+<div class="form-floating w-100 mt-1">
+    <label><b>Tag line:</b></label>
+    {{movie.tagline}}
+</div>
+<div class="form-floating w-100 mt-1">
+    <label><b>Promedio de Votos:</b></label>
+    {{movie.vote_average}}
+</div>
+<div class="form-floating w-100 mt-1">
+    <label><b>Recuento de votos:</b></label>
+    {{movie.vote_count}}
+</div>            
+<div class="form-floating w-100 mt-1" >
+    <label><b>Lenguajes hablados:</b></label>
+    <div class="col-6">
+        <ul class="list-group-flush">
+            <li class="list-group-item" *ngFor="let lng of movie.spoken_languages">
+                <i class="fas fa-map-marker-alt"></i>   {{lng.english_name}}
+            </li>
+        </ul>
+    </div>
+</div> 
+<div class="form-floating w-100 mt-1">
+    <label><b>Reumen:</b></label>
+    {{movie.overview}}
+</div> -->
